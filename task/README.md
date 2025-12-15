@@ -1,16 +1,66 @@
-# task
+1. Project Purpose
 
-A new Flutter project.
+A simple To-Do app where users can:
 
-## Getting Started
+Add tasks
 
-This project is a starting point for a Flutter application.
+View tasks
 
-A few resources to get you started if this is your first Flutter project:
+Mark tasks as completed
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Delete tasks
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Store everything locally
+
+2. Folder Structure (1-line each)
+
+models/ – Task model
+
+providers/ – State management (tasks & theme)
+
+services/ – Local storage (SharedPreferences)
+
+screens/ – UI pages
+
+widgets/ – Reusable components
+
+config/theme/ – Light/Dark theme setup
+
+3. Key Functionality
+✔ Add a Task
+
+From AddTaskScreen → TaskProvider → Saved via SharedPreferences.
+
+✔ View Tasks
+
+TodoListScreen displays tasks from provider.
+
+✔ Mark as Completed
+
+Toggling icon updates task state and saves instantly.
+
+✔ Delete Task
+
+Delete icon or swipe-to-delete → removes task → updates storage.
+
+4. State Management
+
+Using Provider + ChangeNotifier for:
+
+Automatic UI updates
+
+Clean separation of logic
+
+5. Local Storage
+
+Used SharedPreferences with JSON encoding:
+
+Fast
+
+Lightweight
+
+Easy to migrate later
+
+6. Theme Support
+
+Light/Dark mode toggle with saved preference.
